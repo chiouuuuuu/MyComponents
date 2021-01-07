@@ -19,15 +19,19 @@ import classNames from "classnames";
 //     console.log('event')
 // }
 
-Button.defaultProps={
-    disabled:false,
-    type:'default'
+Button.defaultProps = {
+    disabled: false,
+    type: 'default'
     // onClick:defaultEvent,
 }
 
-function Button(props:any){
-    const {disabled,className,children,type,...others}=props;
+function Button(props: any) {
+    const {disabled, className, children, type, ...others} = props;
     // console.log(others)
-    return (<button className={classNames(styles['btn'],className,{[styles[`btn-${type}`]]:!disabled,[styles['btn-disabled']]:disabled},)} disabled={disabled} {...others} >{children}</button>)
+    return (<button className={classNames(styles['btn'], className, {
+        [styles[`btn-${type}`]]: !disabled,
+        [styles['btn-disabled']]: disabled
+    },)} disabled={disabled} {...others} >{children}</button>)
 }
+
 export default Button;

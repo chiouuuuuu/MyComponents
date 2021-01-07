@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="a967bc3e-ee58-43df-8f5e-6829deaffc11" name="默认的" comment="">
+      <change afterPath="$PROJECT_DIR$/src/widget/Input/index.module.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/widget/Input/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/widget/Radio/index.module.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/widget/Radio/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/widget/Button/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/widget/Button/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/widget/Icon/index.module.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/widget/Icon/index.module.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/widget/Icon/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/widget/Icon/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/widget/withMask/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/widget/withMask/index.tsx" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="PackageJsonUpdateNotifier">
+    <dismissed value="$PROJECT_DIR$/package.json" />
+  </component>
+  <component name="ProjectId" id="1mPraqy1o2XxNI5DD15vz1jpPJp" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.standard" value="" />
+    <property name="nodejs_package_manager_path" value="yarn" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/widget/DistPop" />
+      <recent name="$PROJECT_DIR$/src/widget/Pop/lib" />
+      <recent name="$PROJECT_DIR$/src/widget/modal" />
+      <recent name="$PROJECT_DIR$/src/widget" />
+      <recent name="$PROJECT_DIR$/src/widget/Pop" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/widget/IdCard" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="start" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="cstart" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="a967bc3e-ee58-43df-8f5e-6829deaffc11" name="默认的" comment="" />
+      <created>1609406135561</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1609406135561</updated>
+      <workItem from="1609406137301" duration="1410000" />
+      <workItem from="1609480162437" duration="144000" />
+      <workItem from="1609673593007" duration="1930000" />
+      <workItem from="1609676424146" duration="98000" />
+      <workItem from="1609723993614" duration="22891000" />
+      <workItem from="1609809697051" duration="2263000" />
+      <workItem from="1609828494651" duration="4886000" />
+      <workItem from="1609896761412" duration="16019000" />
+      <workItem from="1609932203509" duration="27140000" />
+    </task>
+    <task id="LOCAL-00001" summary="1">
+      <created>1609985605675</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1609985605675</updated>
+    </task>
+    <task id="LOCAL-00002" summary="modal ok">
+      <created>1609987338992</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1609987338992</updated>
+    </task>
+    <task id="LOCAL-00003" summary="modal ok">
+      <created>1609987729230</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1609987729230</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="1" />
+    <MESSAGE value="modal ok" />
+    <option name="LAST_COMMIT_MESSAGE" value="modal ok" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
