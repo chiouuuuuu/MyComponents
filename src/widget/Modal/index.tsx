@@ -7,13 +7,12 @@ import Button from "../Button";
 function Modal(props: any) {
     console.log(props);
     const {
+        title,
+        children,
         headerStyle,
         bodyStyle,
         footerStyle,
         btnGroup,
-        children,
-        handleShow,
-        handleHide,
         onClose,
         onCancel,
         onConfirm
@@ -23,10 +22,9 @@ function Modal(props: any) {
             <div className={styles['modal']}>
                 <div className={styles['modal-header']} style={headerStyle}>
                     <h1 className={styles['title']}>{props.title}</h1>
-                    <Icon className={styles['icon']} type={'close'} onClick={onClose || handleHide}/>
+                    <Icon className={styles['icon']} type={'close'} onClick={onClose}/>
                 </div>
                 <div className={styles['modal-body']} style={bodyStyle}>
-                    sssssodal-bodyodal-bodyodal-bodyodal-bodyodal-bodyodal-body
                     {children}
                 </div>
                 <div className={styles['modal-footer']} style={footerStyle}>
@@ -37,10 +35,6 @@ function Modal(props: any) {
             </div>
         </div>
     )
-}
-
-Modal.defaultProps = {
-    title: 'ladadadadadada',
 }
 
 export default withMask(Modal);

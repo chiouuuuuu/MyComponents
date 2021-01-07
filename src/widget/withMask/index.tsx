@@ -10,34 +10,18 @@ export default function WithMask(Component: any, props?: any) {
         constructor(props:any) {
             super(props);
             console.log('props',props);
-            this.state={
-                maskVisitable:false
-            }
-            this.showComponent=this.showComponent.bind(this);
-            this.hideComponent=this.hideComponent.bind(this);
+            this.state={}
         }
-         showComponent = () => {
-             console.log('show')
-            this.setState({maskVisitable:true});
-        }
-         hideComponent = () => {
-             // console.log('hide')
-            this.setState({maskVisitable:false});
-        }
-
         /***
          *  优先用visitable -> maskvisitable
          */
         render() {
-           const {maskVisitable,...otherState}=this.state;
+           const {...otherState}=this.state;
            const {visitable,...otherProps}=this.props;
-            const classname=visitable||maskVisitable?'show':'hide';
+            const classname=visitable?'show':'hide';
             return <div className={styles[classname]}>
-                <div className={classNames(styles['mask'],styles['mask-background'])} onClick={this.props.onClose||this.hideComponent} />
+                <div className={classNames(styles['mask'],styles['mask-background'])} onClick={this.props.onClose} />
                 <Component
-                    // visitable={maskVisitable}
-                           handleShow={this.showComponent}
-                           handleHide={this.hideComponent}
                            {...otherState} {...otherProps}/>
             </div>
         }

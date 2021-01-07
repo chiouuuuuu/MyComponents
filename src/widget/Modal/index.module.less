@@ -16,8 +16,10 @@
 
 .modal-body{
   //background-color: green;
-  min-height:204px;
+  //min-height:204px;
   padding: 12px;
+  display: flex;
+  justify-content: flex-start;
 }
 
 .modal-header{
@@ -48,4 +50,16 @@
 .warp{
   position: absolute;
   top: 15%;
+  min-width: 400px;
+  min-height: 300px;
+  animation: modal .2s 1;
+}
+
+@keyframes modal {
+  0%{
+    top:0;
+  }
+  100%{
+    top:15%;
+  }
 }

@@ -9,7 +9,8 @@
 }
 
 .mask-background{
-  background-color: rgba(0,0,0);
+  background-color: rgba(0,0,0,.2);
+  animation: anime .3s 1;
 }
 
 .hide{
@@ -18,4 +19,13 @@
 
 .show{
   display: block;
+}
+
+@keyframes anime {
+  0%{
+    background-color: rgba(0,0,0,0);
+  }
+  100%{
+    background-color: rgba(0,0,0,.2);
+  }
 }
