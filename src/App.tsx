@@ -12,10 +12,10 @@ import './App.less';
 import MInput from '@/widget/Input';
 import {Button, Input, Radio} from "antd";
 
-import MButton from '@/widget/Button';
+import MButton from './widget/Button';
 import MModal from '@/widget/Modal';
 import Icon from "@/widget/Icon";
-import MRadio from '@/widget/Radio';
+import MRadio from './widget/Radio';
 
 function App() {
     const [radio, setRadio] = useState('a2');
@@ -29,7 +29,11 @@ function App() {
             <div className="display-box">
                 <div>
                     <p>button group</p>
-                    <MButton.ItemButton>test1</MButton.ItemButton>
+                    <MButton.ButtonGroup>
+                        <MButton>1</MButton>
+                        <MButton>1</MButton>
+                        <MButton>1</MButton>
+                    </MButton.ButtonGroup>
                 </div>
                 <div>
                     <p>radio</p>

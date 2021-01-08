@@ -34,4 +34,19 @@ function Button(props: any) {
     },)} disabled={disabled} {...others} >{children}</button>)
 }
 
+function ButtonGroup(props:any){
+    const {children}=props;
+    return (
+        <div className={styles['btn-group']}>
+            {React.Children.map(children,(child:any)=>{
+                return React.cloneElement(child,{
+                    className:styles['btn-group-item']
+                })
+            })}
+        </div>
+    )
+}
+
+Button.ButtonGroup=ButtonGroup;
+
 export default Button;
