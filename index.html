@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <title>标题</title>
+</head>
+<body>
+
+<form>
+    <label>这个input在focus时，光标会移动至文本的开头处</label><input id="test" placeholder="万元" value="这是一段测试文本">
+</form>
+
+<script language="javascript">
+
+    function set_text_value_position(obj, spos){
+        var tobj = document.getElementById(obj);
+        if(spos<0)
+            spos = tobj.value.length;
+        if(tobj.setSelectionRange){ //兼容火狐,谷歌
+            setTimeout(function(){
+                    tobj.setSelectionRange(spos, spos);
+                    tobj.focus();}
+                ,0);
+        }else if(tobj.createTextRange){ //兼容IE
+            var rng = tobj.createTextRange();
+            rng.move('character', spos);
+            rng.select();
+        }
+    }
+    //调用演示
+    // set_text_value_position('login_div', -1);  //设置到末尾
+    // set_text_value_position('login_div', 0); //设置到开头
+
+    // function f(){
+    //     set_text_value_position('login_div', 0);
+    // }
+    console.log(document.getElementById('test'))
+
+    document.getElementById('test').addEventListener('focus', function() {
+        changeCursorPos('test')
+    });
+    document.getElementById('test').addEventListener('click', function() {
+        changeCursorPos('test')
+    });
+
+    function changeCursorPos(inputId, pos) {
+        var inpObj = document.getElementById(inputId);
+        console.log(inpObj)
+        if (inpObj.setSelectionRange) {
+            inpObj.setSelectionRange(0, 0);
+        }
+    }
+</script>
+
+</body>
+</html>

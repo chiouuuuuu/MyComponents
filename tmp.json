@@ -1,0 +1,34 @@
+{
+
+
+  id
+
+
+
+
+
+
+
+
+
+
+  "": 30,
+  "productVersionId"：30,
+  dataTypeNodeList
+  "dataTypeNodeList": [
+    {
+      "name": null,
+      "productVersionId": "RootNode",
+      "typeRegex": 30,
+      "leftValue": "",
+      "depth": 2,
+      "i18nDescription": 1,
+      "sampleValue": "",
+      "defaultValue": "",
+      "userId": "",
+      "rightValue": 1,
+      "rightValue": 3
+    }
+  ]
+}
+

@@ -31,18 +31,19 @@ function Button(props: any) {
     return (<button className={classNames(styles['btn'], className, {
         [styles[`btn-${type}`]]: !disabled,
         [styles['btn-disabled']]: disabled
-    },)} disabled={disabled} {...others} >{children}</button>)
+    }, styles['btn-group-item'])} disabled={disabled} {...others} >{children}</button>)
 }
 
 function ButtonGroup(props:any){
     const {children}=props;
     return (
         <div className={styles['btn-group']}>
-            {React.Children.map(children,(child:any)=>{
-                return React.cloneElement(child,{
-                    className:styles['btn-group-item']
-                })
-            })}
+            {/*{React.Children.map(children,(child:any)=>{*/}
+            {/*    return React.cloneElement(child,{*/}
+            {/*        className:styles['btn-group-item']*/}
+            {/*    })*/}
+            {/*})}*/}
+            {children}
         </div>
     )
 }

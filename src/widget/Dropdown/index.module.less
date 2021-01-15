@@ -1,0 +1,108 @@
+.ant-dropdown-link {
+  background-color: rgba(230, 240, 253);
+  padding: 8px 16px;
+  border-radius: 5px;
+  margin: 0 16px;
+}
+
+//用menu-warp的padding解决了悬浮窗口会立即消失的问题
+//hide是做隐藏处理，否则移到原本悬浮窗口的位置时会立刻触发mouseover事件
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.menu-warp {
+  padding-top: 10px;
+  position: absolute;
+  top: 20px;
+  left: 0;
+  visibility: visible;
+  //background-color: black;
+}
+
+.hide {
+  visibility: hidden;
+}
+
+.menu,
+.menu-hide {
+  width: auto;
+  background-color: #fff;
+  display: flex;
+  //padding: 5px 0;
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transition: all 0.1s linear;
+  visibility: visible;
+}
+
+.menu-hide {
+  height: 100px;
+  line-height: 0;
+  opacity: 0;
+  transition: all 0.1s linear;
+  visibility: hidden;
+}
+
+.menu {
+  height: 190px;
+  line-height: 1;
+  opacity: 1;
+  transition: all 0.1s linear;
+  display: flex;
+}
+
+.menu-main-item {
+  width: 100%;
+  padding: 8px 0 8px 16px;
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: space-between;
+}
+
+.main > .menu-main-item:hover {
+  background-color: rgb(230, 247, 255);
+  transition: background-color 0.1s linear;
+}
+
+.main > .menu-main-item-active,
+.main > .menu-main-item-active:hover {
+  background-color: #f3f3f3;
+}
+
+.menu-sub-item {
+  display: inline-flex;
+  width: 100%;
+  padding: 3px 6px;
+  //text-align: center;
+  cursor: pointer;
+  justify-content: space-between;
+}
+
+.sub > .menu-sub-item:hover {
+  background-color: rgb(240, 250, 255);
+  transition: background-color 0.1s linear;
+  cursor: pointer;
+}
+
+.sub > .menu-sub-item-active,
+.sub > .menu-sub-item-active:hover {
+  background-color: #f8f8f8;
+}
+
+.main {
+  width: 150px;
+}
+
+.sub {
+  width: 120px;
+  border-left: #cbcbcb solid 1px;
+  transition: all .2s linear;
+}
+
+.sub-hide {
+  width: 0px;
+  border-left: #cbcbcb solid 1px;
+  transition: all .2s linear;
+}

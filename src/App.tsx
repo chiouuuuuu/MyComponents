@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import './App.less';
-// import IDCard from "../src/widget/IdCard";
+import IDCard from "../src/widget/IdCard";
 // import {Popover} from 'antd';
 // import MPopover from "antd/es/popover";
 // import 'antd/es/style'
@@ -10,57 +10,160 @@ import './App.less';
 // import MTooltip from '@/widget/tooltip';
 // import DistPop from '@/widget/DistPop';
 import MInput from '@/widget/Input';
-import {Button, Input, Radio} from "antd";
+import {Button, Dropdown, Input, Radio, Switch} from "antd";
 
 import MButton from './widget/Button';
-import MModal from '@/widget/Modal';
-import Icon from "@/widget/Icon";
 import MRadio from './widget/Radio';
+import MCheckbox from './widget/Checkbox';
+import MSwitch from './widget/Switch';
+import MTag from './widget/Tag';
+import InputMaskThird from './widget/InputMaskThird';
+import MDropdown from './widget/Dropdown';
+import MInputRef from './widget/InputMaskRef'
+import InputMask from "@/widget/InputMask";
 
 function App() {
+    const [str, setStr] = useState<string>('asdfghjk');
     const [radio, setRadio] = useState('a2');
-    const type='text'
-    const handleChange=(e:any)=>{
+    const type = 'text'
+    const handleChange = (e: any) => {
         console.log(e.target.value)
         setRadio(e.target.value);
     }
+
+    const f = () => {
+        return function (e: any) {
+            // console.log(e);
+            // console.log(e.target)
+            // console.log(e.target.value)
+            setStr(e.target.value)
+        }
+    }
+
+
+    const l = () => {
+        console.log('hello')
+    }
+    const productList = [{id: 1, name: 'foo', children: [{id: 2, name: 'bar'}]}, {
+        id: 3,
+        name: 'foobar',
+        callback: l,
+        children: [
+            {
+                id: 4,
+                name: 'qux',
+                callback: l
+            }
+        ],
+    },
+        {
+            id: 5,
+            name: 'bar',
+        }]
+
     return (
         <div className="App">
             <div className="display-box">
+                <div style={{paddingBottom: 200}}>
+                    <p>dropdown</p>
+                    <MDropdown dataList={productList}
+                                trigger={'hover'}
+                                column={2}
+                    >
+                        <a>
+                            dropdown
+                        </a>
+                    </MDropdown>
+                </div>
+                <div>
+                    <p>third</p>
+                    <InputMask>
+                    </InputMask>
+                </div>
+                <div>
+                    <p>ref</p>
+                    <MInputRef></MInputRef>
+                </div>
+                <div>
+                    <p>third</p>
+                    <InputMaskThird>
+                    </InputMaskThird>
+                </div>
+                <div>
+                    <IDCard></IDCard>
+                </div>
+                <div>
+                    <p>tag</p>
+                    <MTag>
+                        foo
+                    </MTag>
+                    <MTag>
+                        bar
+                    </MTag>
+                    <MTag>
+                        foobar
+                    </MTag>
+                    <MTag closable>
+                        baz
+                    </MTag>
+                </div>
+                <div>
+                    <p>switch</p>
+                    <MSwitch></MSwitch>
+                </div>
+                <div>
+                    <p>check box</p>
+                    <MCheckbox value={'foo'}>foo</MCheckbox>
+                    <MCheckbox value={'bar'}>bar</MCheckbox>
+                    <MCheckbox value={'foobar'}>foobar</MCheckbox>
+                </div>
+                <div>
+                    <p>checkbox group</p>
+                    <MCheckbox.Group>
+                        <MCheckbox value={'foo_value'}>foo</MCheckbox>
+                        <MCheckbox value={'bar_value'}>bar</MCheckbox>
+                        <MCheckbox value={'foobar_value'}>foobar</MCheckbox>
+                    </MCheckbox.Group>
+                </div>
+                <div>
+                    <p>checkbox button group</p>
+                    <MCheckbox.Group>
+                        <MCheckbox.Button value={'foo_value'}>foo</MCheckbox.Button>
+                        <MCheckbox.Button value={'bar_value'}>bar</MCheckbox.Button>
+                        <MCheckbox.Button value={'foobar_value'}>foobar</MCheckbox.Button>
+                    </MCheckbox.Group>
+                </div>
+                <p>{str}</p>
+                <Input value={str} onChange={f()}/>
+                <div>
+                    <p>buttons</p>
+                    <MButton onClick={f()}>foobar</MButton>
+                    <MButton>foo</MButton>y
+                    <MButton>bar</MButton>
+                </div>
                 <div>
                     <p>button group</p>
                     <MButton.ButtonGroup>
-                        <MButton>1</MButton>
-                        <MButton>1</MButton>
-                        <MButton>1</MButton>
+                        <MButton>foobar</MButton>
+                        <MButton type={'primary'}>foo</MButton>
+                        <MButton>bar</MButton>
                     </MButton.ButtonGroup>
                 </div>
                 <div>
                     <p>radio</p>
                     <MRadio.Group>
-                        <MRadio value={'22'}>2</MRadio>
-                        <MRadio value={'222'}>23</MRadio>
-                        <MRadio value={'232'}>323</MRadio>
+                        <MRadio value={'22'}>foo</MRadio>
+                        <MRadio value={'222'}>bar</MRadio>
+                        <MRadio value={'232'}>foobar</MRadio>
                         <MRadio value={'disabled'} disabled>disabled</MRadio>
                     </MRadio.Group>
                 </div>
                 <div>
                     <p>radio 单选组合</p>
-                    {/*<Radio>*/}
-                    {/*    sss*/}
-                    {/*</Radio>*/}
-                    {/*<span>*/}
-                    {/*    <input type="radio" disabled name={'a'} value='a2' id={'ida'} checked={radio==='a2'} onChange={handleChange}/>*/}
-                    {/*    <label htmlFor="ida">aaa</label>*/}
-                    {/*</span>*/}
-                    {/*<span>*/}
-                    {/*    <input type="radio" name={'b'} id={'idb'} value={'b2'} checked={radio==='b2'} onChange={handleChange}/>*/}
-                    {/*    <label htmlFor="idb">bbb</label>*/}
-                    {/*</span>*/}
                     <MRadio.Group>
-                        <MRadio.Button value={'22'}>2</MRadio.Button>
-                        <MRadio.Button value={'222'}>23</MRadio.Button>
-                        <MRadio.Button value={'232'}>323</MRadio.Button>
+                        <MRadio.Button value={'foo'}>foo</MRadio.Button>
+                        <MRadio.Button value={'bar'}>bar</MRadio.Button>
+                        <MRadio.Button value={'foobar'}>foobar</MRadio.Button>
                         <MRadio.Button value={'disabled'} disabled>disabled</MRadio.Button>
                     </MRadio.Group>
                 </div>
